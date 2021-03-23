@@ -13,10 +13,26 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
-
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+
+
+    <ion-router-outlet id="main-content">
+      <h3>Sistema Igor</h3>
+      <img src="assets/imgs/ionic.jpg" alt="logo" >
+      <form>
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Senha</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-button expand="block">Entrar</ion-button>
+      </form>
+      <ion-button expand="block" fill="outline">Registrar</ion-button>
+    </ion-router-outlet>
   </ion-split-pane>
 </ion-app>
