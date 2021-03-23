@@ -28,9 +28,8 @@ export class CategoriasPage implements OnInit {
     .subscribe(response => {
       this.items = response;
     },
-    error => {
-      console.log(error)
-    })
+    error => {});
+    
     console.log("Entrou na pagina Categorias");
   }
   ionViewWillLeave() {
