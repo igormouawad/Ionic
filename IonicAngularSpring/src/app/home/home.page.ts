@@ -27,7 +27,6 @@ export class HomePage implements OnInit {
   }
   ngOnDestroy() {
     console.log("Destruiu a pagina Home");
-
   }
 
 }

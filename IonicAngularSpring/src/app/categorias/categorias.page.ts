@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { API_CONFIG } from 'src/config/api.config';
+import { CategoriaDTO } from 'src/models/categoria.dto';
 import { CategoriaService } from 'src/services/categoria.service';
 
 @Component({
@@ -7,6 +9,9 @@ import { CategoriaService } from 'src/services/categoria.service';
   styleUrls: ['./categorias.page.scss'],
 })
 export class CategoriasPage implements OnInit {
+
+  bucketUrl: string = API_CONFIG.bucketBaseUrl;
+  items: CategoriaDTO[];
 
   constructor(public categoriaService: CategoriaService) { }
 
@@ -18,9 +23,10 @@ export class CategoriasPage implements OnInit {
     console.log("Ira entrar na pagina Categorias");
   }
   ionViewDidEnter() {
+    console.log(this.bucketUrl);
     this.categoriaService.findAll()
     .subscribe(response => {
-      console.log(response)
+      this.items = response;
     },
     error => {
       console.log(error)

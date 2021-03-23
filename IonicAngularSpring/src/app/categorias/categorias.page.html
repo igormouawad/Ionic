@@ -9,6 +9,14 @@
   </ion-header>
 </ion-header>
 
-<ion-content>
-Categorias
+<ion-content padding>
+<ion-list>
+
+  <ion-item button *ngFor="let item of items">
+    <ion-thumbnail slot="start">
+      <img src="{{bucketUrl}}/cp{{item.id}}.jpg">
+    </ion-thumbnail>
+    <h2>{{item.nome}}</h2>
+  </ion-item>
+</ion-list>
 </ion-content>
