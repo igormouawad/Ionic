@@ -21,14 +21,12 @@
     <ion-router-outlet id="main-content">
       <h3>Sistema Igor</h3>
       <img src="assets/imgs/ionic.jpg" alt="logo" >
-      <form>
+      <form >
         <ion-item>
-          <ion-label stacked>Email</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input name="email"  type="text" [(ngModel)]="credenciais.email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label stacked>Senha</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input  name="senha" type="password" [(ngModel)]="credenciais.senha"></ion-input>
         </ion-item>
         <ion-button  expand="block" (click)="login()">Entrar</ion-button>
       </form>
