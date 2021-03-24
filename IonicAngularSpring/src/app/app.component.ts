@@ -28,7 +28,7 @@ export class AppComponent {
   login() {
     this.auth.authenticate(this.credenciais)
     .subscribe(response => {
-      console.log(response.headers.get('Authorization'));
+      this.auth.successfulLogin(response.headers.get('Authorization'));
       this.router.navigate(['/categorias']);
     },
       error => {}

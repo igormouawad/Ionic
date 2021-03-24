@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategoriaService } from 'src/services/categoria.service';
 import { ErrorInterceptorProvider } from 'src/interceptors/error-interceptors';
 import { AuthService } from 'src/services/auth.service';
+import { StorageService } from 'src/services/storage.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { AuthService } from 'src/services/auth.service';
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
      CategoriaService,
      AuthService,
+     StorageService,
      ErrorInterceptorProvider
     ],
   bootstrap: [AppComponent],
