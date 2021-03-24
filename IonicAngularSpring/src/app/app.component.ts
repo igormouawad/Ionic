@@ -18,7 +18,8 @@ export class AppComponent {
 
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Categorias', url: '/categorias', icon: 'start' }
+    { title: 'Categorias', url: '/categorias', icon: 'start' },
+    { title: 'Profile', url: '/profile', icon: 'user' }
   ];
 
   constructor(private router: Router,private auth: AuthService) {
