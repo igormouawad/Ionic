@@ -23,9 +23,11 @@
       <img src="assets/imgs/ionic.jpg" alt="logo" >
       <form >
         <ion-item>
+          <ion-label>Email</ion-label>
           <ion-input name="email"  type="text" [(ngModel)]="credenciais.email"></ion-input>
         </ion-item>
         <ion-item>
+          <ion-label>Senha</ion-label>
           <ion-input  name="senha" type="password" [(ngModel)]="credenciais.senha"></ion-input>
         </ion-item>
         <ion-button  expand="block" (click)="login()">Entrar</ion-button>
