@@ -11,5 +11,9 @@
 
 
 <ion-content>
-{{ email }}
+  <ion-avatar >
+    <img class="circle" [src]="cliente?.imageUrl" onerror="this.src='assets/imgs/avatar.jpg'">
+  </ion-avatar>
+  <h2>{{cliente?.nome}}</h2>
+  <p>{{cliente?.email}}</p>
 </ion-content>
