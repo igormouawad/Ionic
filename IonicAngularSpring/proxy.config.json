@@ -1,0 +1,12 @@
+
+{
+    "/api": {
+      "target": "https://springigormouawad.s3-sa-east-1.amazonaws.com/",
+      "secure": true,
+      "changeOrigin": true,
+      "Access-Control-Allow-Origin": "*",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }

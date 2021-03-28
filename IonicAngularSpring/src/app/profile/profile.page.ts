@@ -23,9 +23,20 @@ export class ProfilePage implements OnInit {
       this.clienteService.findByEmail(localUser.email)
       .subscribe(response => {
         this.cliente = response;
-        this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}/cp${this.cliente.id}.png`;
+        this.getImageIfExistes();
+        //this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}/cp${this.cliente.id}.png`;
       },
       error => {});
     }
   }
+
+  getImageIfExistes() {
+    this.clienteService.getImageFromBucket(this.cliente.id)
+    .subscribe(response =>{
+      this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}/cp${this.cliente.id}.png`
+    })
+  }
+
+
+
 }
