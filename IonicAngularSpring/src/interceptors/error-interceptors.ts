@@ -9,7 +9,7 @@ export class ErrorInterceptor implements HttpInterceptor {
 
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log("Passsou pelo intercptor");
+        console.log("Passsou pelo ErrorInterceptor");
         return next.handle(req).pipe(
             map((event: HttpEvent<any>) => {
                 if (event instanceof HttpResponse) {
